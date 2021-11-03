@@ -71,21 +71,30 @@ main{
 }
 header{
     grid-area: header;
-    display: flex;
+    display: inline;
+    justify-content: space-around;
+}
+.logo{
+    display:flex;
+    float: left;
+}
+.nav{
+    display:flex;
+    align-items: center;
 }
 .user{
-    display:inline-block;
-    /*position:fixe;*/
+    display:inline;
+    float: right;
 }
 .navig ul {
     list-style: none;
     display: inline;
 }
 nav li{
-    display:inline;
+    margin-top: 10px;
+    display: inline;
+    text-align: center;
     justify-content: space-around;
-    flex:5;
-    
 }
 nav li a {
     text-align: center;
@@ -94,7 +103,6 @@ nav li a {
 }
 /*.manWorking{
     grid-area: manWorking;
-    
 }*/
 .text1{
     grid-area: text1;
