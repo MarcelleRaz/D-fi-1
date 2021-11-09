@@ -68,23 +68,17 @@ main{
     background-position: top 10px right 200px;
 }
 header{
-    display:grid;
-    grid-template-areas: "logo . navig . user count";
-    grid-template-columns: 1fr 2fr 4fr 1fr 1fr 2fr;
+    display:flex;
+    justify-content: space-between;
 }
 .logo{
-    grid-area: logo;
     margin-top: 20px;
     margin-left: 2rem;
 }
 .navig{
-    grid-area: navig;
-    display:inline;
-    justify-content: space-around;
     margin-top: 0px;
 }
 .user{
-    grid-area: user;
     margin-top: 10px;
     display:flex;
     align-items: top;
@@ -99,7 +93,6 @@ header{
     width: calc(3fr-10px);
 }
 .count{
-    grid-area: count;
     display:inline-block;
     background:none;
     max-width: 100%;
