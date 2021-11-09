@@ -26,9 +26,8 @@
     font-style: normal;
 }
 body {
-    background-color:grey;
     display: grid;
-    grid-template-rows: 6fr 3fr 6fr 6fr 3fr;
+    grid-template-rows: 2fr 0.7fr 2fr 2fr 1fr;
     font-family: 'Roboto-Light';
     font-size: 1em;
 }
@@ -36,13 +35,13 @@ body {
     font-family: 'Roboto-Regular';
     font-weight: normal;
     font-size: 1.2em;
-    color: black;
+    /*color: black;*/
 }
 h1{
     font-family: 'Roboto-Medium';
     font-weight: bold;
     font-size: 3em;
-    color: black;
+    /*color: black;*/
 }
 h2{
     font-family: 'Roboto-Regular';
@@ -62,50 +61,153 @@ h4{
 }
 main{
     display: grid;
-    grid-template-areas: "header header header header"
-                         ". text1 . .";
-    background-image: url('../images/Manworking.jpg');
+    grid-template-rows: 1fr 2fr;
+    background-color: #007ef3;
+    background-image: url('../images/Man_working.png');
     background-repeat: no-repeat;
-    background-position: top 50px right 100px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-position: top 10px right 200px;
 }
 header{
-    grid-area: header;
-    display: inline;
-    justify-content: space-around;
+    display:grid;
+    grid-template-areas: "logo . navig . user count";
+    grid-template-columns: 1fr 2fr 4fr 1fr 1fr 2fr;
 }
 .logo{
-    display:flex;
-    float: left;
+    grid-area: logo;
+    margin-top: 20px;
+    margin-left: 2rem;
 }
-.nav{
-    display:flex;
-    align-items: center;
+.navig{
+    grid-area: navig;
+    display:inline;
+    justify-content: space-around;
+    margin-top: 0px;
 }
 .user{
-    display:inline;
-    float: right;
+    grid-area: user;
+    margin-top: 10px;
+    display:flex;
+    align-items: top;
+    height: 3rem;
+    justify-content: space-around;
+    margin-right: 30px;
+}
+.user> input{
+    background:none;
+    border:none;
+    margin: 5px;
+    width: calc(3fr-10px);
+}
+.count{
+    grid-area: count;
+    display:inline-block;
+    background:none;
+    max-width: 100%;
+    margin:10px;
+    height: 5rem;
+}
+.count> img, .count>option {
+    left:10px;
+    max-width:100%;
 }
 .navig ul {
     list-style: none;
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    max-width:100% ;
 }
 nav li{
-    margin-top: 10px;
-    display: inline;
+    padding:0 2rem;
     text-align: center;
-    justify-content: space-around;
 }
 nav li a {
-    text-align: center;
+    text-decoration: none;
+    color:white;
+    font-size:calc(0.3rem + 0.7vw);
+}
+nav li:hover {
+    background-color: #0067c7;
+}
+.text1{
+    margin-left: 200px;
+    max-width: 300px;
+    color:white;
+    margin-bottom: 250px;
+}
+.text1> p, button {
+    line-height: 2;
+}
+.text1> button{
+    color:white;
+    background: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.text2 {
     text-decoration: none;
     color:black;
+    line-height: 2;
+    max-width: 80%;
+    text-align: center;
+    margin-left:100px;
+    left:100px ;
 }
-/*.manWorking{
-    grid-area: manWorking;
-}*/
-.text1{
-    grid-area: text1;
+.services> h3, .services>p{
+    text-decoration: none;
+    color:white;
+    line-height: 2;
+    max-width: 450px;
+    margin-left: 100px;
+}
+.services, .value {
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    /*width: 75%;*/
+}
+.value> h3, .value> select, .value> option{
+    text-decoration: none;
+    color:white;
+    line-height: 2;
+    margin-left: 100px;
+}
+.value> select, .value> option{
+    background:none;
+    border:none;
+    border-bottom: 1px solid white;
+}
+.text3 {
+    display: grid;
+    grid-template-areas: "services img2"
+                            "img3 value";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.text3>.services{
+    grid-area: services;
+    background-color: #007ef3;
+}
+.text3> .img2{
+    grid-area:img2;
+    background-image: url('../images/Desktop_406x320.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.text3> .img3{
+    grid-area:img3;
+    background-color: #0067c7;
+    background-image: url('../images/Group 177.png');
+    background-size: 50%;
+    background-position: 20% 50%;
+    background-repeat: no-repeat;
+}
+.text3>.value{
+    grid-area:value;
+    background-color: #007ef3;
 }
 footer {
     background-color:white;
