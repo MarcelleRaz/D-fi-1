@@ -25,6 +25,9 @@
     font-weight: normal;
     font-style: normal;
 }
+* {
+    box-sizing: border-box;
+}
 body {
     display: grid;
     grid-template-rows: 1.8fr 0.6fr 1.8fr 1.8fr 0.7fr;
@@ -65,33 +68,24 @@ main{
     grid-template-rows: 1fr 2fr;
     background-color: #007ef3;
     background-image: url('../images/Man_working.png');
-    background-size: calc(95% - 60vw);
+    background-size: calc(95% - 45vw);
     background-repeat: no-repeat;
-    background-position: 85% 5%;
+    background-position: 95% 5%;
     align-content: center;
     justify-content: space-around;
 }
 header {
     display:flex;
-    align-content: center;
     justify-content: space-around;
-    /*border:1px solid black;*/
     max-width: 1200px;
 }
 .logo {
-    margin-top: 20px;
-    margin-left: 2rem;
-   /* border:1px solid black;*/
+    margin-top: 10px;
 }
 .user-count {
     margin-top: 10px;
-    margin-right: 2rem;
     display: flex;
-    align-content: center;
-    justify-content: space-between;
     background:none;
-    /*border:1px solid black;*/
-    width: 100%;
 }
 .count>select, .count> option {
     background:none;
@@ -101,14 +95,12 @@ header {
 .user {
     display:inline-flex;
     align-items: flex-start;
-    justify-content: left;
-    width: 100%;
 }
 .user> input {
     background:none;
     border:none;
-    margin: 5px;
-    width: calc(1fr-10px);
+    border-bottom:1px solid white;
+    width:70%;
 }
 .user> button {
     background: none;
@@ -121,18 +113,20 @@ header {
 .count {
     display:inline-flex;
     align-items: flex-start;
-    justify-content: left;
-    width: 100%;
 }
 .count> img {
     filter: invert(100%); 
     -webkit-filter: invert(100%);
 }
+.navig {
+    width:100%;
+}
 .navig ul {
+    margin-top: 10px;
     list-style: none;
+    padding:0;
     display: flex;
-    flex-direction: row;
-    width:100% ;
+    justify-content: space-around;
 }
 nav li{
     padding:0 3rem;
@@ -149,7 +143,6 @@ nav li:hover {
 .text1{
     margin-left: calc(100px + 3vw);
     color:white;
-    margin-bottom: (auto, 250px);
     max-width: 30%;
 }
 .text1> p, button {
@@ -232,18 +225,20 @@ nav li:hover {
 .contact {
     display: flex;
     flex-direction: row;
-    flex:2 1;
-    flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-around;
     max-width: 1200px;
-    line-height: 2rem;
+    line-height: 5rem;
 }
 .formulaire {
-    justify-self: end;
-    width:100%;
     max-width: 800px;
-    /*border:1px solid black;*/
+    flex: 1.2;
+    margin-left: 20%;
+    display: flex;
+    flex-direction:column;
+    grid-column: 1;
+}
+form {
+    justify-self: flex-end;
 }
 form> .bouton {
     background-color:#f4f4f4;
@@ -252,19 +247,38 @@ form> .bouton {
     border-radius: 5px;
     padding: 0.5rem 2rem;
 }
+.enter  , #message {
+    width: 60%;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    border:none;
+}
+.lab {
+    border: 1px solid black;
+    width: 100%;
+    padding: 15px 22px;
+    margin: 5px 5px;
+    text-align:start;
+}
+.labMessage {
+    border: 1px solid black;
+    width: 100%;
+    padding: 60px 22px;
+    margin: 10px 5px;
+    text-align:start
+}
 aside {
-    justify-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    width:100%;
     max-width: 400px;
-    /*border:1px solid black;*/
 }
 aside> .avatar2 {
     background-color:#dff0ff;
+    padding:1rem;
 }
 aside> .card {
+    background-color: #f4f4f4;
+    padding:1rem;
     margin-top: 2rem;
     color: #007ef3;
 }
