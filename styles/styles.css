@@ -28,66 +28,77 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto-Light';
+    margin-block: 0;
 }
 html{
-    font-size:100%;
+    font-size:62.5%;
     margin:0;
     border:none;
     padding:0;
+    word-spacing: 0.5rem;
+    line-height: 1.5;
 }
 body {
     display: grid;
     grid-template-rows: 0.18fr 0.15fr 0.09fr 0.26fr 0.24fr 0.07fr 0.05fr 0.07fr;
     font-family: 'Roboto-Light';
-    font-size: 1rem;
-    margin:0;
-    max-width: 1200px;
-}
-body>* {
-    max-width: 1200px;
+    font-size: 1.2rem;
 }
 button , .B_system {
     font-family: 'Roboto-Regular';
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 h1{
     font-family: 'Roboto-Medium';
     font-weight: bold;
     font-size: 3rem;
+    margin:0;
+    padding:1.5rem;
 }
 h2{
     font-family: 'Roboto-Regular';
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin:0;
+    padding:0;
 }
 h3{
     font-family: 'Roboto-Regular';
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: black;
+    margin:0;
+    padding:0;
 }
 h4 {
     font-family: 'Roboto-Light';
     font-weight: normal;
     font-size: 1.5rem;
+    margin:20px;
+    padding:0;
 }
 #compte_config, #V1, #V2, #V3 {
     font-family: 'Roboto-Light';
-    font-size: calc(0.3rem + 0.7vw);
-    font-weight: bold;
+    font-size: 1.2rem;
 }
 a {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin:0;
+    padding:0;
 }
 #V1, #V2, #V3 {
 background-color: #007ef3;
 }
 main {
+    background-color: #007ef3;
+    display:flex;
+    justify-content: center;
+}
+#principale {
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows: 0.5fr 1.7fr;
-    background-color: #007ef3;
     background-image: url('../images/Man_working.png');
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -95,10 +106,17 @@ main {
     align-content: center;
     justify-content: center;
     border:none;
+    max-width:1200px;
+}
+.fond-bleu {
+    background-color: #007ef3;
+    display:flex;
+    justify-content: center;
 }
 .vide {
     background-color: #007ef3;
     border:none;
+    padding:120px;
 }
 header {
     display:flex;
@@ -106,12 +124,10 @@ header {
     width: 100%;
 }
 .logo {
-    margin-top: 1rem;
     margin-left:1rem;
     justify-self: start;
 }
 .user-count {
-    margin-top: 1rem;
     margin-right:1rem;
     display: flex;
     background:none;
@@ -149,6 +165,7 @@ header {
 }
 .navig {
     width:100%;
+    margin-top: -1rem;
 }
 .navig ul {
     list-style: none;
@@ -172,20 +189,23 @@ nav li.active, nav li a:hover {
     font-weight: bold;
 }
 .text1{
-    margin-left: calc(100px + 3vw);
+    margin-left: 5rem;
     color:white;
-    max-width: 30%;
+    max-width: 35%;
+    margin-top:16rem;
 }
 .text1> p, button {
     line-height: 2;
+    padding:1.5rem;
 }
 .text1> button {
     color:white;
     background: none;
     border: 1px solid white;
     border-radius: 5px;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    margin:1.5rem;
 }
 .text2 {
     text-decoration: none;
@@ -193,32 +213,34 @@ nav li.active, nav li a:hover {
     line-height: 2;
     text-align: center;
     justify-self: center;
+    max-width: 700px;
+    padding:80px;
 }
 .services, .value {
     display:flex;
     flex-direction: column;
     align-items: start;
 }
-
 .text3 {
     display: grid;
     grid-template-areas: "services img2"
                             "img3 value";
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    width:100%;
+    
 }
 .text3>.services {
     grid-area: services;
     background-color: #007ef3;
     padding-bottom: 2rem;
+    max-width:375px;
+    margin-left: calc(75px + 1vw);
+    padding:100px 85px 100px 0;
 }
 .services>h3, .services>p, .services>a {
     text-decoration: none;
     color:white;
     line-height: 2;
-    width: 70%;
-    margin-left: calc(100px + 3vw);
 }
 .text3> .img2 {
     grid-area:img2;
@@ -226,24 +248,25 @@ nav li.active, nav li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.text3> .img3 {
+.img3 {
     grid-area:img3;
+    padding:20px;
+}
+.fond-bleu-fonce {
+    min-width: min(50vw,500px);
     background-color: #0067c7;
-    background-image: url('../images/Group177.png');
-    background-size: auto auto;
-    background-position: 30% 50%;
-    background-repeat: no-repeat;
 }
 .text3>.value {
     grid-area:value;
     background-color: #007ef3;
+    max-width:375px;
+    padding-top:100px;
 }
 .value> h3, .value> select, .value> option {
     text-decoration: none;
     color:white;
     line-height: 2;
-    margin-left: calc(100px + 3vw);
-    width: 70%;
+    margin-left: calc(75px + 1vw);
 }
 .value> select, .value> option{
     background:none;
@@ -254,40 +277,43 @@ nav li.active, nav li a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    line-height: 5rem;
+    justify-content:center;
 }
 .formulaire {
     margin-left: 3.5rem;
+    margin:76px 0px 79px 0px;
 }
-#form {
-    width: 46.88 rem;
-    height: 47.19 rem;
+#formImg {
+    max-height: auto;
+    max-width: 550px;
 }
 aside {
     display: flex;
     flex-direction: column;
-    margin-right: 3.5rem;
-    margin-bottom:11.25rem;
-    margin-top:13rem;
 }
 aside> .avatar2 {
     background-color:#dff0ff;
+    max-width:100%;
+    max-height:309px;
     padding:1rem;
-    width:19rem;
+    line-height:2;
 }
 aside> .card {
     background-color: #f4f4f4;
-    padding:1rem;
-    margin-top: 2rem;
+    margin-top: 20px;
     color: #007ef3;
-    width:19rem;
+    max-width:100%;
+    max-height:132px;
+    padding:1rem;
+    line-height:2;
 }
 #grey {
     background-color: #f4f4f4;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    border-top: 1px solid #dbd5d5;
+    border-bottom: 1px solid #dbd5d5;
 }
 .text4 {
     text-align: center;
@@ -308,8 +334,7 @@ aside> .card {
     background-color: #007ef3;
     border: 1px solid white;
     border-radius: 5px;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding:10px 50px;
 }
 .B_system a {
     text-decoration: none;
@@ -322,9 +347,11 @@ aside> .card {
     border:none;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid #dbd5d5;
+    box-shadow: 1px 0px #fcf6f6;
 }
 .social_media a img {
-    padding: 2em;
+    padding: 7rem 2rem;
 }
 .foot {
     background-color:white;
@@ -332,11 +359,10 @@ aside> .card {
     width: 100%;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid #887a7a;
 }
 .signature {
     max-width: 1200px;
-    padding: 2em;
+    padding: 7rem 0 14rem 0;
 }
 .signature img {
     filter: invert(100%); 
