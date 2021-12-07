@@ -27,12 +27,24 @@
 }
 * {
     box-sizing: border-box;
+    font-family: 'Roboto-Light';
+}
+html{
+    font-size:100%;
+    margin:0;
+    border:none;
+    padding:0;
 }
 body {
     display: grid;
-    grid-template-rows: 1.8fr 0.3fr 0.6fr 1.8fr 1.8fr 0.7fr 0.4fr;
+    grid-template-rows: 0.18fr 0.15fr 0.09fr 0.26fr 0.24fr 0.07fr 0.05fr 0.07fr;
     font-family: 'Roboto-Light';
-    font-size: 15px;
+    font-size: 1rem;
+    margin:0;
+    max-width: 1200px;
+}
+body>* {
+    max-width: 1200px;
 }
 button , .B_system {
     font-family: 'Roboto-Regular';
@@ -62,21 +74,22 @@ h4 {
 }
 #compte_config, #V1, #V2, #V3 {
     font-family: 'Roboto-Light';
-    font-size: 1em;
+    font-size: calc(0.3rem + 0.7vw);
     font-weight: bold;
 }
 a {
-    font-size: 1em;
+    font-size: 1rem;
 }
 #V1, #V2, #V3 {
 background-color: #007ef3;
 }
 main {
     display: grid;
+    grid-template-columns:1fr;
     grid-template-rows: 0.5fr 1.7fr;
     background-color: #007ef3;
     background-image: url('../images/Man_working.png');
-    background-size: auto auto;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: 95% 5%;
     align-content: center;
@@ -93,11 +106,13 @@ header {
     width: 100%;
 }
 .logo {
-    margin-top: 15px;
+    margin-top: 1rem;
+    margin-left:1rem;
     justify-self: start;
 }
 .user-count {
-    margin-top: 15px;
+    margin-top: 1rem;
+    margin-right:1rem;
     display: flex;
     background:none;
 }
@@ -173,7 +188,6 @@ nav li.active, nav li a:hover {
     padding-left: 50px;
 }
 .text2 {
-    max-width: 1200px;
     text-decoration: none;
     color:black;
     line-height: 2;
@@ -240,72 +254,46 @@ nav li.active, nav li a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 1200px;
     line-height: 5rem;
 }
 .formulaire {
-    max-width: 800px;
-    flex: 1.2;
-    margin-left: 20%;
-    display: flex;
-    flex-direction:column;
-    grid-column: 1;
+    margin-left: 3.5rem;
 }
-form {
-    justify-self: flex-end;
-}
-form> .bouton {
-    background-color:#f4f4f4;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 2rem;
-}
-.enter  , #message {
-    width: 60%;
-    padding: 15px 22px;
-    margin: 10px 5px;
-    border:none;
-}
-.lab {
-    border: 1px solid black;
-    width: 100%;
-    padding: 15px 22px;
-    margin: 5px 5px;
-    text-align:start;
-}
-.labMessage {
-    border: 1px solid black;
-    width: 100%;
-    padding: 60px 22px;
-    margin: 10px 5px;
-    text-align:start
+#form {
+    width: 46.88 rem;
+    height: 47.19 rem;
 }
 aside {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    margin-right: 3.5rem;
+    margin-bottom:11.25rem;
+    margin-top:13rem;
 }
 aside> .avatar2 {
     background-color:#dff0ff;
     padding:1rem;
+    width:19rem;
 }
 aside> .card {
     background-color: #f4f4f4;
     padding:1rem;
     margin-top: 2rem;
     color: #007ef3;
+    width:19rem;
 }
 #grey {
     background-color: #f4f4f4;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*border:1px solid black;*/
+    
 }
 .text4 {
     text-align: center;
     max-width: 1200px;
+    margin-top: 2.8rem;
+    margin-bottom:3.3rem;
 }
 .text4 a input {
     background-color:#007ef3;
@@ -327,14 +315,7 @@ aside> .card {
     text-decoration: none;
     color:white;
 }
-footer {
-    background-color:white;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid #575151;
-}
+
 .social_media {
     display:flex;
     background:none;
@@ -345,9 +326,15 @@ footer {
 .social_media a img {
     padding: 2em;
 }
+.foot {
+    background-color:white;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #887a7a;
+}
 .signature {
-    background:none;
-    border:none;
     max-width: 1200px;
     padding: 2em;
 }
