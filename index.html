@@ -4,14 +4,15 @@
         <meta charset="utf-8">
         <title>B_system</title>
         <link rel="stylesheet" href="styles/styles.css" type="text/css">
-        <link id="favicone" rel="shortcut icon" href="images/Favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="images/Favicon.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
         <main>
             <div class="acceuil">
                 <header>
                     <div class="acceuil_logo">
-                        <img src="images/02.Logo_white.png" alt="B_system" width= "100" height="19">
+                        <img src="images/Logo_white.png" alt="B_system" width= "150" height="28">
                     </div>
                     <nav class="acceuil_navig">
                         <ul>
@@ -30,12 +31,12 @@
                             <select name="compte_utilisateur" id="compte_config">
                                 <option class="regularfont" value="">Your area</option>
                             </select>
-                            <img src="images/02.Avatar.png" alt="B-System" width="20" height="20">
+                            <img src="images/Avatar.png" alt="B-System" width="20" height="20">
                         </div>
                     </div>
                 </header>
                 <section class="text1">
-                    <h1>We make <br> magic!</h1>
+                    <h1>We make magic!</h1>
                     <p>We are a freelance design studio passionate about rethinking how things operate every day.</p> <br>
                     <button name="B_system" type="button">Meet B_system</button>
                 </section>
@@ -79,7 +80,11 @@
             <div class="formulaire">
                 <h2>Contact us!</h2>
                 <p>Please fill out this form to send your message:</p>
-                <img id="formImg" src="images/formulaire-temporaire.png" alt="Formulaire_B-System" width="750" height="755">
+                <picture>
+                    <source media="(min-width:800px)" srcset="images/formulaire-temporaire.png">
+                    <source media="(max-width:799px)" srcset="images/responsive/formulaire-temporaire-mobile.png">
+                    <img id="formImg" src="images/formulaire-temporaire.png" alt="Formulaire_B-System" width="750" height="755">
+                </picture>
             </div>
             <aside>
                 <div class="avatar2">
@@ -110,8 +115,9 @@
             <a href="https://twitter.com/?lang=fr"><img class="twitter" src="images/icones/Twitter.svg" alt="Twitter"></a>
         </div>
         <div class="foot">
-        <div class="signature">
-            <img class="logo_noir" src="images/02.Logo_white.png" alt="B_system" width= "100" height="19">
-        </div></div>
+            <div class="signature">
+                <img class="logo_noir" src="images/Logo_white.png" alt="B_system" width= "150" height="28">
+            </div>
+        </div>
     </body>
 </html>

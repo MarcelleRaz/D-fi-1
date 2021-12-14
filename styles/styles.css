@@ -28,7 +28,6 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto-Light';
-    margin-block: 0;
 }
 html{
     font-size:62.5%;
@@ -42,35 +41,34 @@ body {
     display: grid;
     grid-template-rows: 0.18fr 0.15fr 0.09fr 0.26fr 0.24fr 0.07fr 0.05fr 0.07fr;
     font-family: 'Roboto-Light';
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin:0;
 }
-#favicone {
-    filter: invert(100%); 
-    -webkit-filter: invert(100%);
-}
+
 button , .B_system {
     font-family: 'Roboto-Regular';
     font-weight: normal;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 h1{
     font-family: 'Roboto-Medium';
     font-weight: bold;
-    font-size: 3.7rem;
+    font-size: 3.2rem;
     margin:0;
     padding:1.5rem;
+    max-width: 270px;
 }
 h2{
     font-family: 'Roboto-Regular';
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin:0;
     padding:0;
 }
 h3{
     font-family: 'Roboto-Regular';
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: black;
     margin:0;
     padding:0;
@@ -78,16 +76,16 @@ h3{
 h4 {
     font-family: 'Roboto-Light';
     font-weight: normal;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin:20px;
     padding:0;
 }
 #V1, #V2, #V3 {
     font-family: 'Roboto-Light';
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 a {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     margin:0;
     padding:0;
 }
@@ -109,24 +107,23 @@ main {
     grid-template-columns:1fr;
     grid-template-rows: 0.5fr 1.7fr;
     background-image: url('../images/Man_working.png');
-    background-size: auto 100%;
+    background-size: auto 95%;
     background-repeat: no-repeat;
     background-position: 95% 5%;
-    align-content: center;
     justify-content: center;
     border:none;
-    max-width:1200px;
 }
 
 /*##header*/
 header {
-    display:flex;
+    display:inline-flex;
     justify-content: space-around;
-    width: 100%;
+    line-height: 0;
 }
 .acceuil_logo {
     margin-left:1rem;
     justify-self: start;
+    align-self: center;
 }
 .acceuil_user-count {
     margin-right:1rem;
@@ -147,6 +144,7 @@ header {
     border:none;
     border-bottom:1px solid white;
     width:70%;
+    align-self: center;
 }
 .user> button {
     background: none;
@@ -167,6 +165,7 @@ header {
     height:fit-content;
     border-radius: 5px;
     padding: 8px 20px;
+    align-self: center;
 }
 .count> img {
     filter: invert(100%); 
@@ -174,7 +173,7 @@ header {
 }
 .acceuil_navig {
     width:100%;
-    margin-top: -1rem;
+    align-self: center;
 }
 .acceuil_navig ul {
     list-style: none;
@@ -191,7 +190,7 @@ nav li a {
     color:white;
     font-size:calc(0.3rem + 0.7vw);
     display:inline-block;
-    padding:15px 30px;
+    padding:30px 15px;
 }
 nav li.active, nav li a:hover {
     background-color: #0067c7;
@@ -202,8 +201,8 @@ nav li.active, nav li a:hover {
 .text1{
     margin-left: 5rem;
     color:white;
-    max-width: 35%;
-    margin-top:16rem;
+    max-width: 50%;
+    margin-top:6rem;
 }
 .text1> p, button {
     line-height: 2;
@@ -221,7 +220,7 @@ nav li.active, nav li a:hover {
 .vide {
     background-color: #007ef3;
     border:none;
-    padding:12rem;
+    padding:6rem;
 }
 
 /*----------------------------------------
@@ -277,7 +276,6 @@ nav li.active, nav li a:hover {
 .img1 {
     width: 100%;
     height:100%;
-    /* object-fit: cover; */
 }
 .grille_img2 {
     grid-area:img2;
@@ -329,12 +327,12 @@ nav li.active, nav li a:hover {
     justify-content:center;
 }
 .formulaire {
-    margin-left: 3.5rem;
+    text-indent: 2rem;
     margin:76px 76px 79px 0px;
 }
 #formImg {
-    max-height: auto;
-    max-width: 550px;
+    height: auto;
+    max-width: 100%;
 }
 
 /*##Coordonnées*/
@@ -345,7 +343,6 @@ aside {
 aside> .avatar2 {
     background-color:#dff0ff;
     max-width:100%;
-    max-height:auto;
     padding:2.6rem;
     line-height:2;
 }
@@ -434,4 +431,98 @@ aside> .card {
 .signature img {
     filter: invert(100%); 
     -webkit-filter: invert(100%);
+}
+@media screen and (max-width: 800px) {
+    main {
+        border:none;
+    }
+    .acceuil{
+        background-image: url('../images/Man_working.png');
+        background-size: auto 50%;
+        background-repeat: no-repeat;
+        background-position: center top 15px;
+        border:none;
+        display:flex;
+        flex-direction:column;
+        text-align: center;
+    }
+    header {
+        display:grid;
+        grid-template-areas: "nav logo count";
+        grid-template-columns: 1fr 1.5fr 1fr;
+        justify-content: space-around;
+        align-content:flex-start;
+    }
+    .acceuil_navig {
+        grid-area:nav;
+        width:100%;
+    }
+    .acceuil_navig ul {
+        list-style: none;
+        padding:0;
+        margin:0;
+        display: block;
+    }
+    nav li{
+        text-align: left;
+        /* content-visibility: hidden; */
+        border-bottom:0.5px solid white;
+        padding:0;
+            }
+    nav li a {
+        text-decoration: none;
+        color:white;
+        font-size:calc(0.3rem + 0.7vw);
+        line-height: 2rem;
+        padding:0;
+        margin:0;
+    }
+    .acceuil_logo {
+        grid-area:logo;
+        justify-self:center;
+    }
+    .user, .count>select {
+        visibility: hidden;
+    }
+    .count {
+        border:none;
+    }
+    .text1{
+        margin:0;
+        padding-top:400px;
+        max-width:100%;
+    }
+    .text1 > p {
+       padding:1.5rem 10rem;
+    }
+    h1 {
+        max-width:100%;
+    }
+    .vide {
+        padding:2rem;
+        border:none;
+    }
+    .grille {
+        display: flex;
+        flex-direction:column;
+    }
+    .grille_text3, .grille_text4 {
+        padding-bottom: 2rem;
+        max-width:100%;
+        justify-content: center;
+        padding:3rem 1rem;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        margin-bottom:2rem;
+    }
+    .formulaire {
+        text-align:center;
+        justify-self: center;
+        margin:5rem 0;
+    }
+    .formulaire img {
+        justify-self: center;
+    }
 }
