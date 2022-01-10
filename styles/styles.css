@@ -175,6 +175,9 @@ header {
     width:100%;
     align-self: center;
 }
+.acceuil_navig label, #hamburger {
+    display: none;
+}
 .acceuil_navig ul {
     list-style: none;
     padding:0;
@@ -233,7 +236,7 @@ nav li.active, nav li a:hover {
     text-align: center;
     justify-self: center;
     max-width: 700px;
-    padding:80px 0;
+    padding:80px 10px;
 }
 
 /*----------------------------------------
@@ -456,19 +459,19 @@ aside> .card {
     .acceuil_navig {
         grid-area:nav;
         width:100%;
+        align-content: start;
     }
     .acceuil_navig ul {
         list-style: none;
         padding:0;
         margin:0;
-        display: block;
+        display: none;
     }
     nav li{
         text-align: left;
-        /* content-visibility: hidden; */
         border-bottom:0.5px solid white;
         padding:0;
-            }
+    }
     nav li a {
         text-decoration: none;
         color:white;
@@ -476,6 +479,16 @@ aside> .card {
         line-height: 2rem;
         padding:0;
         margin:0;
+    }
+    .acceuil_navig label { 
+        display: inline-block; 
+        color: white;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+      }
+    .acceuil_navig input:checked ~ #hamitem{ 
+        display: block; 
     }
     .acceuil_logo {
         grid-area:logo;
